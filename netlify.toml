@@ -1,0 +1,15 @@
+[build]
+  # La carpeta de salida de tu build (donde se generarán los archivos de producción).
+  publish = "dist"
+  # El comando que Netlify debe ejecutar para construir el proyecto.
+  command = "npm run build"
+
+# Opcional: Configuración del contexto de despliegue para producción
+[context.production]
+  environment = { NODE_ENV = "production" }
+
+# Si necesitas redireccionar rutas para manejar rutas en una SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
