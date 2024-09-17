@@ -1,5 +1,5 @@
 import Carousel from '../components/carousel';
-import '../styles/proyectos.css'; // Importa los estilos CSS
+// import '../styles/proyectos.css'; // Importa los estilos CSS
 
 
 const Proyectos = () => {

@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import '../styles/home.css'; // Importa los estilos CSS
+// import '../styles/home.css'; // Importa los estilos CSS
 
 
 const Home = () => {
