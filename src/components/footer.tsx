@@ -1,4 +1,4 @@
-import './footer.css'; // Importa los estilos CSS
+import '../styles/footer.css'; // Importa los estilos CSS
 
 
 const Footer = () => {

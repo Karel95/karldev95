@@ -1,4 +1,4 @@
-import './carousel.css'; // Importa los estilos CSS
+import '../styles/carousel.css'; // Importa los estilos CSS
 
 const Carousel = () => {
   return (
