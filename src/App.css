@@ -1,0 +1,259 @@
+:root {
+  --primary-color: #BB86FC;
+  --secondary-color: #03DAC6;
+  --background-color: #FFFFFF;
+  --text-primary-color: #212121;
+  --text-secondary-color: #757575;
+  --sections-background: #F5F5F5;
+  --borders-color: #E0E0E0;
+  --card-bg-color: #ffffff;
+  --header-height: 80px;
+  --sidebar-width: 240px;
+  /* --sidebar-collapsed-width: 60px; */
+  --footer-height: 60px;
+}
+/*  */
+.dark-mode {
+  --primary-color: #6200EE;
+  --secondary-color: #018786;
+  --background-color: #121212;
+  --text-primary-color: #E0E0E0;
+  --text-secondary-color: #B0B0B0;
+  --sections-background: #1E1E1E;
+  --borders-color: #292929;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "sidebar footer";
+  grid-template-columns: var(--sidebar-width) 1fr;
+  grid-template-rows: var(--header-height) 1fr var(--footer-height);
+  min-height: 100vh;
+  transition: grid-template-columns 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.seccion-descripcion {
+  font-size: 1.2rem;
+}
+
+
+
+.btn-info {
+  font-size: 1.1rem;
+  margin: 20px;
+}
+
+.texto-negro {
+  color: black;
+}
+
+.texto-blanco {
+  color: white;
+}
+
+
+
+/* header */
+body.sidebar-collapsed {
+  grid-template-columns: var(--sidebar-collapsed-width) 1fr;
+}
+
+.logo {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav a {
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+.navbar {
+  grid-area: header;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: 1000;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-toggler{
+  position: fixed;
+  top: 1.5rem;
+  left: 5rem;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-expand-lg .container-fluid {
+  margin-left: 3rem;
+  border: none;
+}
+
+/* .container-fluid{
+  width: 60%;
+} */
+
+.show {
+  /* background: var(--sections-background); */
+  transition: grid-template-columns 0.3s ease;
+}
+
+.navbar-expand-lg .show {
+  padding: 2rem;
+  border: 3px solid var(--borders-color);
+}
+
+.nav-link {
+  /* color: var(--text-primary-color); */
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: gray;
+}
+
+.nav-link:active {
+  color: gray;
+}
+
+
+.nav-link.disabled {
+  color: gray;
+}
+
+.navbar-collapse.show {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* .mode-switcher {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+} */
+
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tema-container {
+  display: inherit;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* @media */
+@media (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  main {
+    margin-left: 0;
+  }
+}
+
+
+
+
+
+/* Adaptable (Responsivo) */
+
+@media screen and (max-width: 400px) {
+  .overlay p {
+    font-size: 18px;
+  }
+
+  .overlay i {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-collapse.show {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .testimonio-imagen {
+    height: 120px;
+    width: 120px;
+  }
+
+  .testimonio-texto {
+    font-size: 18px;
+  }
+}
+
