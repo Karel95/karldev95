@@ -13,6 +13,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -28,6 +41,13 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -52,6 +72,117 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* header */
+
+.logo {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav a {
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+.navbar {
+  grid-area: header;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: 1000;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-toggler{
+  position: fixed;
+  top: 1.5rem;
+  left: 5rem;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-expand-lg .container-fluid {
+  margin-left: 3rem;
+  border: none;
+}
+
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tema-container {
+  display: inherit;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+/* Adaptable (Responsivo) */
+
+@media screen and (max-width: 400px) {
+  .overlay p {
+    font-size: 18px;
+  }
+
+  .overlay i {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-collapse.show {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .testimonio-imagen {
+    height: 120px;
+    width: 120px;
+  }
+
+  .testimonio-texto {
+    font-size: 18px;
+  }
 }
 
 @media (prefers-color-scheme: light) {
