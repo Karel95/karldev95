@@ -57,10 +57,9 @@ const Carousel = () => {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5></h5>
+                <h5>Turning ideas into solutions</h5>
                 <p>
-                  Nuestra pasión por la barbería nos lleva a brindarte lo mejor en cortes y estilo.<br/> 
-                  Nos preocupamos por cada detalle para que salgas siempre con tu mejor versión.
+                  I take your projects from concept to reality with innovation and accuracy.<br/> 
                 </p>
               </div>
             </div>
@@ -71,10 +70,9 @@ const Carousel = () => {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5></h5>
+                <h5>Creativity in action</h5>
                 <p>
-                  Profesionalismo, calidad y estilo. Trabajamos para resaltar tu mejor imagen.<br/> 
-                  ¡Reserva tu cita hoy mismo y déjanos cuidar de tu estilo!
+                  Every line of code is an opportunity to create something unique and functional.<br/> 
                 </p>
               </div>
             </div>
@@ -85,10 +83,9 @@ const Carousel = () => {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5></h5>
+                <h5>Committed to excellence</h5>
                 <p>
-                  Cortar el cabello no es solo una rutina, es un arte.<br/> 
-                  ¡Reserva tu experiencia personalizada con nosotros!
+                  My goal is to deliver results that exceed expectations, every time.<br/> 
                 </p>
               </div>
             </div>
@@ -99,10 +96,9 @@ const Carousel = () => {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5></h5>
+                <h5>Your vision, my mission</h5>
                 <p>
-                  Relájate, disfruta, y déjanos encargarnos de que luzcas increíble.<br/> 
-                  ¡Una experiencia de barbería como ninguna otra!
+                  I develop digital solutions that reflect your essence.<br/> 
                 </p>
               </div>
             </div>
@@ -113,10 +109,9 @@ const Carousel = () => {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5></h5>
+                <h5>Passion for detail</h5>
                 <p>
-                  Relájate, disfruta, y déjanos encargarnos de que luzcas increíble.<br/> 
-                  ¡Una experiencia de barbería como ninguna otra!
+                  Every project is a piece crafted with accuracy and professionalism.<br/> 
                 </p>
               </div>
             </div>
@@ -127,10 +122,9 @@ const Carousel = () => {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5></h5>
+                <h5>Pushing boundaries</h5>
                 <p>
-                  Porque mereces más que un simple corte, ven y vive una experiencia premium.<br/> 
-                  ¡Reserva tu cita hoy mismo y déjanos cuidar de tu estilo!
+                  Innovation drives my work, always aiming to go beyond.<br/> 
                 </p>
               </div>
             </div>
