@@ -59,7 +59,7 @@ const Carousel = () => {
               <div className="carousel-caption d-none d-md-block">
                 <h5>Turning ideas into solutions</h5>
                 <p>
-                  I take your projects from concept to reality with innovation and accuracy.<br/> 
+                  I take your projects from concept to reality with innovation and accuracy.
                 </p>
               </div>
             </div>
@@ -72,7 +72,7 @@ const Carousel = () => {
               <div className="carousel-caption d-none d-md-block">
                 <h5>Creativity in action</h5>
                 <p>
-                  Every line of code is an opportunity to create something unique and functional.<br/> 
+                  Every line of code is an opportunity to create something unique and functional.
                 </p>
               </div>
             </div>
@@ -85,7 +85,7 @@ const Carousel = () => {
               <div className="carousel-caption d-none d-md-block">
                 <h5>Committed to excellence</h5>
                 <p>
-                  My goal is to deliver results that exceed expectations, every time.<br/> 
+                  My goal is to deliver results that exceed expectations, every time.
                 </p>
               </div>
             </div>
@@ -98,7 +98,7 @@ const Carousel = () => {
               <div className="carousel-caption d-none d-md-block">
                 <h5>Your vision, my mission</h5>
                 <p>
-                  I develop digital solutions that reflect your essence.<br/> 
+                  I develop digital solutions that reflect your essence.
                 </p>
               </div>
             </div>
@@ -111,7 +111,7 @@ const Carousel = () => {
               <div className="carousel-caption d-none d-md-block">
                 <h5>Passion for detail</h5>
                 <p>
-                  Every project is a piece crafted with accuracy and professionalism.<br/> 
+                  Every project is a piece crafted with accuracy and professionalism.
                 </p>
               </div>
             </div>
@@ -124,7 +124,7 @@ const Carousel = () => {
               <div className="carousel-caption d-none d-md-block">
                 <h5>Pushing boundaries</h5>
                 <p>
-                  Innovation drives my work, always aiming to go beyond.<br/> 
+                  Innovation drives my work, always aiming to go beyond.
                 </p>
               </div>
             </div>
