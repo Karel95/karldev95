@@ -356,6 +356,11 @@ html, body {
   min-height: 40vh;
 }
 
+.carousel-caption h5 {
+  color: #000;
+  text-shadow: 2px 2px 5px rgb(255, 255, 255); /* Desplazamiento en x, desplazamiento en y, desenfoque, color de la sombra */
+  font-size: 2rem;
+}
 .carousel-caption p {
   color: #000;
   text-shadow: 2px 2px 5px rgb(255, 255, 255); /* Desplazamiento en x, desplazamiento en y, desenfoque, color de la sombra */
