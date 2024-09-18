@@ -4,7 +4,7 @@ import { lightTheme, darkTheme } from "./themes";
 import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/navbar";
-import Main from "./components/main";
+import Main from "./components/main-place";
 import Footer from "./components/footer";
 
 export default function App() {
