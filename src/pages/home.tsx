@@ -32,7 +32,8 @@ const Home = () => {
             <div className="columna col-12 col-md-4">
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">Frontend</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet, odio eget fringilla scelerisque, sem purus fringilla mauris, nec ultricies nisl nisl sit amet dolor. </p>
+              <h6>Creator of digital experiences</h6>
+              <p>I design and develop websites that not only stand out but inspire.</p>
               <div className="badges-contenedor">
                 <span className="badge text-bg-primary">HTML</span>
                 <span className="badge text-bg-primary">CSS</span>
@@ -44,7 +45,8 @@ const Home = () => {
             <div className="columna col-12 col-md-4">
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">Backend</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet, odio eget fringilla scelerisque, sem purus fringilla mauris, nec ultricies nisl nisl sit amet dolor. </p>
+              <h6>Innovation within your reach</h6>
+              <p>I turn your vision into a flawless digital experience.</p>
               <div className="badges-contenedor">
                 <span className="badge text-bg-primary">Node.js</span>
                 <span className="badge text-bg-primary">Express.js</span>
@@ -54,7 +56,8 @@ const Home = () => {
             <div className="columna col-12 col-md-4">
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">Database</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet, odio eget fringilla scelerisque, sem purus fringilla mauris, nec ultricies nisl nisl sit amet dolor. </p>
+              <h6>Projects with purpose</h6>
+              <p>Every piece of code holds meaning: solving problems and improving experiences.</p>
               <div className="badges-contenedor">
                 <span className="badge text-bg-primary">MongoDB</span>
                 <span className="badge text-bg-primary">PostgreSQL</span>
@@ -64,7 +67,8 @@ const Home = () => {
             <div className="columna col-12 col-md-4">
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">Version Control</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet, odio eget fringilla scelerisque, sem purus fringilla mauris, nec ultricies nisl nisl sit amet dolor. </p>
+              <h6>The art of coding</h6>
+              <p>I don't just develop apps, I craft elegant and efficient solutions.</p>
               <div className="badges-contenedor">
                 <span className="badge text-bg-primary">Git</span>
                 <span className="badge text-bg-primary">GitHub</span>
@@ -73,7 +77,8 @@ const Home = () => {
             <div className="columna col-12 col-md-4">
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">DevOps</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet, odio eget fringilla scelerisque, sem purus fringilla mauris, nec ultricies nisl nisl sit amet dolor. </p>
+              <h6>Building the future, one project at a time</h6>
+              <p>I create digital solutions that shape tomorrow's experiences.</p>
               <div className="badges-contenedor">
                 <span className="badge text-bg-primary">Docker</span>
                 <span className="badge text-bg-primary">Netlify</span>
@@ -83,7 +88,8 @@ const Home = () => {
             <div className="columna col-12 col-md-4">
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">Other</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet, odio eget fringilla scelerisque, sem purus fringilla mauris, nec ultricies nisl nisl sit amet dolor. </p>
+              <h6>Innovative by nature, precise by design</h6>
+              <p>I merge creativity and technical expertise to deliver exceptional results.</p>
               <div className="badges-contenedor">
                 <span className="badge text-bg-primary">Responsive Design</span>
                 <span className="badge text-bg-primary">Browser Compatibility</span>
