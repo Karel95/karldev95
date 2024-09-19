@@ -6,6 +6,8 @@ import {
   IconButton,
   Menu,
   MenuItem,
+  Snackbar,
+  SnackbarCloseReason,
   Toolbar,
   Typography,
 } from "@mui/material";
@@ -62,6 +64,26 @@ const Navbar: React.FC<ModeProps> = ({ isDarkMode, mode }) => {
   // const handleCloseUserMenu = () => {
   //   setAnchorElUser(null);
   // };
+
+  //snackbar
+  const [open, setOpen] = React.useState(false);
+
+  const themeMsg = isDarkMode ? 'Dark Mode Active' : 'Light Mode Active';
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (
+    _event: React.SyntheticEvent | Event,
+    reason?: SnackbarCloseReason
+  ) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
 
   return (
     <AppBar>
@@ -189,7 +211,16 @@ const Navbar: React.FC<ModeProps> = ({ isDarkMode, mode }) => {
               startIcon={themeIcon}
               variant="contained"
               color="primary"
-              onClick={toggleTheme}
+              onClick={() => {
+                toggleTheme();
+                handleClick();
+              }}
+            />
+            <Snackbar
+              open={open}
+              autoHideDuration={3000}
+              onClose={handleClose}
+              message={themeMsg}
             />
             {/* <Menu
               sx={{ mt: "45px" }}
