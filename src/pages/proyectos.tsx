@@ -83,14 +83,14 @@ const Proyectos = () => {
             {/* Proyecto 5 */}
             <div className="col-12 col-md-6 col-lg-4">
               <div className="proyecto">
-                <img src="imagenes/proyecto5.png" alt="Proyecto 1" />
+                <img src="imagenes/proyecto5.png" alt="EduWeb" />
                 <div className="overlay">
-                  <p>Proyecto 5</p>
+                  <p>EduWeb</p>
                   <div className="iconos-contenedor">
-                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Karel95/offline-education-web" target="_blank" rel="noopener noreferrer">
                       <i className="bi bi-github"></i>
                     </a>
-                    <a href="https://karel95.github.io/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://eduweb-suriname.netlify.app/" target="_blank" rel="noopener noreferrer">
                       <i className="bi bi-laptop"></i>
                     </a>
                   </div>
