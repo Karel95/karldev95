@@ -1,13 +1,17 @@
 import { Button } from '@mui/material';
 // import '../styles/home.css'; // Importa los estilos CSS
 
+interface HomeProps {
+  isDarkMode: boolean; // Define el tipo aquí
+}
 
-const Home = () => {
+const Home: React.FC<HomeProps> = ({isDarkMode}) => {
+  const imageSrc = isDarkMode ? 'imagenes/500x500 Dark-Transparent.png' : 'imagenes/500x500 Light-Transparent.png';
   return (
     <>
       <section className="hero align-items-stretch">
         <div className="hero-principal d-flex flex-column justify-content-center align-items-center">
-          <img className="hero-imagen-desarrollador rounded-circle" src="imagenes/profile-photo.jpg" alt="Foto de Karel Hernández" />
+          <img className="hero-imagen-desarrollador rounded-circle" src={imageSrc} alt="Foto de Karel Hernández" />
           <h1>Hello, I am Karel Hernández</h1>
           <h2>Web Developer | Frontend Specialist.</h2>
           <Button variant='contained' href="mailto:karelh2207@gmail.com" className="btn cta-button">Contact me</Button>
