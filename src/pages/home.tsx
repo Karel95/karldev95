@@ -1,23 +1,39 @@
-import { Button } from '@mui/material';
+import { Button } from "@mui/material";
 // import '../styles/home.css'; // Importa los estilos CSS
 
 interface HomeProps {
   isDarkMode: boolean; // Define el tipo aquí
 }
 
-const Home: React.FC<HomeProps> = ({isDarkMode}) => {
-  const imageSrc = isDarkMode ? 'imagenes/500x500 Dark-Transparent.png' : 'imagenes/500x500 Light-Transparent.png';
+const Home: React.FC<HomeProps> = ({ isDarkMode }) => {
+  const imageSrc = isDarkMode
+    ? "imagenes/500x500 Dark-Transparent.png"
+    : "imagenes/500x500 Light-Transparent.png";
   return (
     <>
       <section className="hero align-items-stretch">
         <div className="hero-principal d-flex flex-column justify-content-center align-items-center">
-          <img className="hero-imagen-desarrollador rounded-circle" src={imageSrc} alt="Foto de Karel Hernández" />
+          <img
+            className="hero-imagen-desarrollador rounded-circle"
+            src={imageSrc}
+            alt="Foto de Karel Hernández"
+          />
           <h1>Hello, I am Karel Hernández</h1>
           <h2>Web Developer | Frontend Specialist.</h2>
-          <Button variant='contained' href="mailto:karelh2207@gmail.com" className="btn cta-button">Contact me</Button>
+          <Button
+            variant="contained"
+            href="mailto:karelh2207@gmail.com"
+            className="btn cta-button"
+          >
+            Contact me
+          </Button>
         </div>
-        <div className="hero-inferior">
-          <img className="hero-inferior-imagen img-fluid" src="imagenes/hero-inferior.svg" alt="Monitor, laptop y logos de HTML, CSS, JavaScript y React." />
+        <div className="hero-inferior flex items-center justify-center h-screen">
+          <img
+            className="hero-inferior-imagen img-fluid"
+            src="imagenes/hero-inferior.svg"
+            alt="Monitor, laptop y logos de HTML, CSS, JavaScript y React."
+          />
         </div>
       </section>
 
@@ -25,9 +41,75 @@ const Home: React.FC<HomeProps> = ({isDarkMode}) => {
       <section id="sobre-mi" className="sobre-mi">
         <div className="contenedor">
           <h2 className="seccion-titulo">About Me</h2>
-          <p className="seccion-texto">I am a passionate Web Developer with a strong foundation in frontend technologies. With over 2 years of experience in creating dynamic, responsive, and user-friendly websites, I have developed a keen eye for detail and a commitment to delivering high-quality solutions. My expertise lies in HTML, CSS, JavaScript, and modern frameworks like React and Node.js, allowing me to build seamless, interactive web applications.</p>
+          <p className="seccion-texto">
+            I am a passionate Web Developer with a strong foundation in frontend
+            technologies. With over 2 years of experience in creating dynamic,
+            responsive, and user-friendly websites, I have developed a keen eye
+            for detail and a commitment to delivering high-quality solutions. My
+            expertise lies in HTML, CSS, JavaScript, and modern frameworks like
+            React and Node.js, allowing me to build seamless, interactive web
+            applications.
+          </p>
         </div>
       </section>
+
+      <div className="m-auto max-w-6xl p-12">
+        <div className="flex flex-col md:flex-row">
+          <div className="md:w-1/2 max-w-md flex flex-col justify-center">
+            <div className="md:text-5xl text-2xl uppercase font-black">
+              Suriname Offline Education Web
+            </div>
+            <div className="text-xl mt-10">
+              3rd Place in AI Datasur Hackathon - EduWeb: An engaging
+              educational platform making learning interactive and accessible.
+              Build by Akshay Merhai and Karel Hernandez.
+            </div>
+            <div className="my-5 h-16">
+              <Button
+                variant="contained"
+                className="btn cta-button"
+                component="a"
+                href="https://eduweb-suriname.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                EduWeb
+              </Button>
+            </div>
+          </div>
+          <div className="flex md:justify-end w-full md:w-1/2 -mt-5">
+            <div className="bg-dots">
+              <div className="shadow-2xl max-w-md z-10 rounded-full mt-6 ml-4">
+                <div className="proyecto">
+                  <img src="imagenes/proyecto5.png" alt="EduWeb" />
+                  <div className="overlay">
+                    <p>EduWeb</p>
+                    <div className="iconos-contenedor">
+                      <a
+                        href="https://github.com/Karel95/offline-education-web"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="bi bi-github"></i>
+                      </a>
+                      <a
+                        href="https://eduweb-suriname.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="bi bi-laptop"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-2xl bg-white">
+                  <img alt="AI-thon" className="" src="imagenes/ai-thon.jpg" />{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Experiencia */}
       <section id="experiencia" className="experiencia seccion-clara">
@@ -37,7 +119,10 @@ const Home: React.FC<HomeProps> = ({isDarkMode}) => {
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">Frontend</p>
               <h6>Creator of digital experiences</h6>
-              <p>I design and develop websites that not only stand out but inspire.</p>
+              <p>
+                I design and develop websites that not only stand out but
+                inspire.
+              </p>
               <div className="badges-contenedor">
                 <span className="badge text-bg-primary">HTML</span>
                 <span className="badge text-bg-primary">CSS</span>
@@ -61,7 +146,10 @@ const Home: React.FC<HomeProps> = ({isDarkMode}) => {
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">Database</p>
               <h6>Projects with purpose</h6>
-              <p>Every piece of code holds meaning: solving problems and improving experiences.</p>
+              <p>
+                Every piece of code holds meaning: solving problems and
+                improving experiences.
+              </p>
               <div className="badges-contenedor">
                 <span className="badge text-bg-primary">MongoDB</span>
                 <span className="badge text-bg-primary">PostgreSQL</span>
@@ -72,7 +160,10 @@ const Home: React.FC<HomeProps> = ({isDarkMode}) => {
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">Version Control</p>
               <h6>The art of coding</h6>
-              <p>I don't just develop apps, I craft elegant and efficient solutions.</p>
+              <p>
+                I don't just develop apps, I craft elegant and efficient
+                solutions.
+              </p>
               <div className="badges-contenedor">
                 <span className="badge text-bg-primary">Git</span>
                 <span className="badge text-bg-primary">GitHub</span>
@@ -82,7 +173,9 @@ const Home: React.FC<HomeProps> = ({isDarkMode}) => {
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">DevOps</p>
               <h6>Building the future, one project at a time</h6>
-              <p>I create digital solutions that shape tomorrow's experiences.</p>
+              <p>
+                I create digital solutions that shape tomorrow's experiences.
+              </p>
               <div className="badges-contenedor">
                 <span className="badge text-bg-primary">Docker</span>
                 <span className="badge text-bg-primary">Netlify</span>
@@ -93,18 +186,25 @@ const Home: React.FC<HomeProps> = ({isDarkMode}) => {
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">Other</p>
               <h6>Innovative by nature, precise by design</h6>
-              <p>I merge creativity and technical expertise to deliver exceptional results.</p>
+              <p>
+                I merge creativity and technical expertise to deliver
+                exceptional results.
+              </p>
               <div className="badges-contenedor">
                 <span className="badge text-bg-primary">Responsive Design</span>
-                <span className="badge text-bg-primary">Browser Compatibility</span>
-                <span className="badge text-bg-primary">SEO Best Practices</span>
+                <span className="badge text-bg-primary">
+                  Browser Compatibility
+                </span>
+                <span className="badge text-bg-primary">
+                  SEO Best Practices
+                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
