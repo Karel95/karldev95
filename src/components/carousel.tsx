@@ -52,7 +52,7 @@ const Carousel = () => {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                src="./imagenes/proyecto5.png"
+                src="./imagenes/proyecto1.jpg"
                 className="d-block w-100"
                 alt="..."
               />
@@ -65,7 +65,7 @@ const Carousel = () => {
             </div>
             <div className="carousel-item">
               <img
-                src="./imagenes/proyecto6.png"
+                src="./imagenes/proyecto2.jpg"
                 className="d-block w-100"
                 alt="..."
               />
@@ -78,7 +78,7 @@ const Carousel = () => {
             </div>
             <div className="carousel-item">
               <img
-                src="./imagenes/proyecto7.png"
+                src="./imagenes/proyecto3.jpg"
                 className="d-block w-100"
                 alt="..."
               />
@@ -91,7 +91,7 @@ const Carousel = () => {
             </div>
             <div className="carousel-item">
               <img
-                src="./imagenes/proyecto8.png"
+                src="./imagenes/proyecto4.png"
                 className="d-block w-100"
                 alt="..."
               />
@@ -104,7 +104,7 @@ const Carousel = () => {
             </div>
             <div className="carousel-item">
               <img
-                src="./imagenes/proyecto9.png"
+                src="./imagenes/proyecto5.png"
                 className="d-block w-100"
                 alt="..."
               />
@@ -117,7 +117,7 @@ const Carousel = () => {
             </div>
             <div className="carousel-item">
               <img
-                src="./imagenes/proyecto10.png"
+                src="./imagenes/proyecto6.png"
                 className="d-block w-100"
                 alt="..."
               />
