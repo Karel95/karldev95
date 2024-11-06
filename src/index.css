@@ -94,7 +94,6 @@ nav a:hover {
 }
 
 .navbar {
-  grid-area: header;
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
@@ -103,7 +102,6 @@ nav a:hover {
   top: 0;
   left: 0;
   right: 0;
-  height: var(--header-height);
   z-index: 1000;
   padding: 1rem;
   display: flex;
@@ -151,15 +149,20 @@ nav a:hover {
 /* home */
 
 .hero {
-  margin-top: 7rem;
-  min-height: 450px;
+  margin-top: 1rem;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .hero-principal {
-  padding: 3rem;
+  width: 100%;                               /* Equivalente a w-full */
+  background-image: url('/public/imagenes/proyecto2.jpg');  /* Fondo con imagen */
+  background-size: cover;                     /* Equivalente a bg-cover */
+  background-position: center;                /* Equivalente a bg-center */
+  min-height: 96vh;                               /* Equivalente a h-[96vh] */
+  padding-top: 4rem;                              /* Equivalente a p-12 */
+  /* Puedes agregar más propiedades si necesitas */
 }
 
 .hero-imagen-desarrollador {
@@ -193,6 +196,10 @@ nav a:hover {
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+}
+
+.white-text {
+  color: white;
 }
 
 /* sobre mi */
@@ -530,12 +537,6 @@ footer {
 @media screen and (max-width: 767px) {
   .navbar-brand {
     display: none;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .navbar-collapse.show {
-    border: none;
   }
 }
 

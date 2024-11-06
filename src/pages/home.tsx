@@ -12,22 +12,40 @@ const Home: React.FC<HomeProps> = () => {
   return (
     <>
       <section className="hero align-items-stretch">
-        <div className="hero-principal d-flex flex-column justify-content-center align-items-center">
-          <img
-            className="hero-imagen-desarrollador rounded-circle"
-            src="imagenes/profile.jpg"
-            alt="Foto de Karel Hernández"
-          />
-          <h1>Hello, I am Karel Hernández</h1>
-          <h2>Web Developer | Frontend Specialist.</h2>
-          <Button
-            variant="contained"
-            href="mailto:karelh2207@gmail.com"
-            className="btn cta-button"
-          >
-            Contact me
-          </Button>
+        <div className="hero-principal m-auto w-full py-28 px-5">
+          <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:w-1/2 justify-content-center align-items-center">
+              <img
+                className="hero-imagen-desarrollador"
+                src="imagenes/500x500 Dark-Transparent.png"
+                alt="Karel Hernández"
+              />
+              <h1 className="white-text">Hello, I am Karel Hernández</h1>
+              <h2 className="white-text">Web Developer | Frontend Specialist.</h2>
+              <div className="my-5 h-16">
+                <Button
+                  variant="contained"
+                  href="mailto:karelh2207@gmail.com"
+                  className="btn cta-button"
+                >
+                  Contact me
+                </Button>
+              </div>
+            </div>
+            <div className="flex w-full md:w-1/2 justify-center md:justify-end">
+              <div className="bg-dots">
+                <div className="shadow-2xl max-w-xs z-10 rounded-md mt-8">
+                  <img
+                    src="imagenes/profile.jpg"
+                    alt="Karel Hernández"
+                    className="rounded-md"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div className="hero-inferior flex items-center justify-center h-screen">
           <img
             className="hero-inferior-imagen img-fluid"
@@ -53,6 +71,7 @@ const Home: React.FC<HomeProps> = () => {
         </div>
       </section>
 
+      {/* ai-thon */}
       <div className="m-auto max-w-6xl p-12">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 max-w-md flex flex-col justify-center">
@@ -79,7 +98,7 @@ const Home: React.FC<HomeProps> = () => {
           </div>
           <div className="flex md:justify-end w-full md:w-1/2 -mt-5">
             <div className="bg-dots">
-              <div className="shadow-2xl max-w-md z-10 rounded-full mt-6 ml-4">
+              <div className="shadow-2xl max-w-md z-10 rounded-md mt-6 ml-4">
                 <div className="proyecto">
                   <img src="imagenes/proyecto5.png" alt="EduWeb" />
                   <div className="overlay">
