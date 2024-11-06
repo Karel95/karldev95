@@ -32,7 +32,7 @@ const Home: React.FC<HomeProps> = () => {
                 </Button>
               </div>
             </div>
-            <div className="flex w-full md:w-1/2 justify-center md:justify-end">
+            <div className="flex w-full md:w-1/2 justify-center">
               <div className="bg-dots">
                 <div className="shadow-2xl max-w-xs z-10 rounded-md mt-8">
                   <img
