@@ -1,7 +1,14 @@
 // import '../styles/footer.css'; // Importa los estilos CSS
 
+interface HomeProps {
+  isDarkMode: boolean; // Define el tipo aquí
+}
 
-const Footer = () => {
+const Footer: React.FC<HomeProps> = ({isDarkMode}) => {
+    const imageSrc = isDarkMode
+    ? "imagenes/500x500 Dark-Transparent.png"
+    : "imagenes/500x500 Light-Transparent.png";
+
   return (
     <>
       <section id="contacto" className="contacto seccion-oscura">
@@ -27,7 +34,7 @@ const Footer = () => {
         </div>
       </section>
       <footer className="seccion-oscura d-flex flex-column align-items-center justify-content-center"> 
-        <img className="footer-logo rounded-circle" src="imagenes/profile-photo.jpg" alt="Logo del portafolio" />
+        <img className="footer-logo rounded-circle" src={imageSrc} alt="Logo del portafolio" />
         <p className="footer-texto text-center">I learn and create every day.<br/>Let's build a project together.<br/>Feel free to reach out to me at...</p>
         <div className="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
           <a href="https://github.com/Karel95" target="_blank" rel="noopener noreferrer">

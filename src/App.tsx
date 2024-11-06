@@ -41,7 +41,7 @@ export default function App() {
           <CssBaseline />
           <Navbar isDarkMode={isDarkMode} mode={mode} />
           <Main isDarkMode={isDarkMode}/>
-          <Footer />
+          <Footer isDarkMode={isDarkMode}/>
         </BrowserRouter>
       </ThemeProvider>
     </>

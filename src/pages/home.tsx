@@ -5,17 +5,17 @@ interface HomeProps {
   isDarkMode: boolean; // Define el tipo aquí
 }
 
-const Home: React.FC<HomeProps> = ({ isDarkMode }) => {
-  const imageSrc = isDarkMode
-    ? "imagenes/500x500 Dark-Transparent.png"
-    : "imagenes/500x500 Light-Transparent.png";
+const Home: React.FC<HomeProps> = () => {
+  // const imageSrc = isDarkMode
+  //   ? "imagenes/500x500 Dark-Transparent.png"
+  //   : "imagenes/500x500 Light-Transparent.png";
   return (
     <>
       <section className="hero align-items-stretch">
         <div className="hero-principal d-flex flex-column justify-content-center align-items-center">
           <img
             className="hero-imagen-desarrollador rounded-circle"
-            src={imageSrc}
+            src="imagenes/profile.jpg"
             alt="Foto de Karel Hernández"
           />
           <h1>Hello, I am Karel Hernández</h1>
