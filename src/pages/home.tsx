@@ -12,9 +12,9 @@ const Home: React.FC<HomeProps> = () => {
   return (
     <>
       <section className="hero align-items-stretch">
-        <div className="hero-principal min-h-screen m-auto w-full py-28 justify-center">
+        <div className="hero-principal m-auto w-full justify-center">
           <div className="flex flex-col sm:flex-row">
-            <div className="flex w-full sm:w-1/3 justify-center">
+            <div className="flex w-full h-full sm:w-1/3 justify-center align-items-center">
               <div className="bg-dots">
                 <div className="shadow-2xl max-w-xs z-10 rounded-md mt-8">
                   <img

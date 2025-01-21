@@ -160,6 +160,8 @@ nav a:hover {
   background-size: cover;                     /* Equivalente a bg-cover */
   background-position: center;                /* Equivalente a bg-center */
   /* Puedes agregar más propiedades si necesitas */
+  height: 100vh;
+  
 }
 
 .hero-imagen-desarrollador {
@@ -394,6 +396,13 @@ html, body {
   }
   .carousel-caption p {
     display: none !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-principal {
+    display: flex;
+    align-items: center;
   }
 }
 
