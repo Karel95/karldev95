@@ -12,7 +12,7 @@ const Home: React.FC<HomeProps> = () => {
   return (
     <>
       <section className="hero align-items-stretch">
-        <div className="hero-principal min-h-screen m-auto w-full py-28">
+        <div className="hero-principal min-h-screen m-auto w-full py-28 justify-center">
           <div className="flex flex-col sm:flex-row">
             <div className="flex w-full sm:w-1/3 justify-center">
               <div className="bg-dots">
@@ -27,11 +27,6 @@ const Home: React.FC<HomeProps> = () => {
             </div>
 
             <div className="flex flex-col sm:w-2/3 justify-content-end align-items-start m-3">
-              {/* <img
-                className="hero-imagen-desarrollador"
-                src="imagenes/500x500 Dark-Transparent.png"
-                alt="Karel Hernández"
-              /> */}
               <h1 className="white-text text-5xl font-bold">Hello, I am Karel Hernández</h1>
               <h2 className="white-text">
                 I am a passionate developer with a strong foundation in web, app and game development, backend systems, and blockchain technology.

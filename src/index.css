@@ -159,8 +159,6 @@ nav a:hover {
   background-image: url('/public/imagenes/proyecto2.jpg');  /* Fondo con imagen */
   background-size: cover;                     /* Equivalente a bg-cover */
   background-position: center;                /* Equivalente a bg-center */
-  min-height: 96vh;                               /* Equivalente a h-[96vh] */
-  padding-top: 4rem;                              /* Equivalente a p-12 */
   /* Puedes agregar más propiedades si necesitas */
 }
 
