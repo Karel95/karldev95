@@ -406,6 +406,13 @@ html, body {
   }
 }
 
+@media (max-width: 640px) {
+  .bg-dots {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
 
 /* footer */
 /* contacto */
