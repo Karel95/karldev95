@@ -14,7 +14,7 @@ const Home: React.FC<HomeProps> = () => {
       <section className="hero align-items-stretch">
         <div className="hero-principal m-auto w-full justify-center">
           <div className="flex flex-col sm:flex-row">
-            <div className="flex w-full h-full sm:w-1/3 justify-center align-items-center">
+            <div className="flex w-full sm:w-1/3 h-1/4 sm:h-auto justify-center align-items-center">
               <div className="bg-dots">
                 <div className="shadow-2xl max-w-xs z-10 rounded-md mt-8">
                   <img
@@ -26,7 +26,7 @@ const Home: React.FC<HomeProps> = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:w-2/3 justify-content-end align-items-start m-3">
+            <div className="flex flex-col sm:w-1/3 h-3/4 sm:h-auto justify-content-end align-items-start m-3 mr-12">
               <h1 className="white-text text-5xl font-bold">Hello, I am Karel Hernández</h1>
               <h2 className="white-text">
                 I am a passionate developer with a strong foundation in web, app and game development, backend systems, and blockchain technology.

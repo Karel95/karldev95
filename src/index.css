@@ -407,6 +407,9 @@ html, body {
 }
 
 @media (max-width: 640px) {
+  .hero-principal {
+    height: auto;
+  }
   .bg-dots {
     margin-top: 3rem;
     margin-bottom: 3rem;
