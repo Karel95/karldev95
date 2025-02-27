@@ -34,7 +34,7 @@ const Home: React.FC<HomeProps> = () => {
               <div className="my-3 h-16">
                 <Button
                   variant="contained"
-                  href="mailto:karelh2207@gmail.com"
+                  href="mailto:karelhernandez2207@gmail.com"
                   className="btn cta-button"
                 >
                   Contact me

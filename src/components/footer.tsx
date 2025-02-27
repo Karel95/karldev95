@@ -22,7 +22,7 @@ const Footer: React.FC<HomeProps> = ({isDarkMode}) => {
                 I am always open to discussing new opportunities, collaborations, or freelance projects. Contact me to start your development project, and I'll turn your vision into reality.
               </div>
               <div className="col-12 col-md-4">
-                <a href="mailto:karelh2207@gmail.com">
+                <a href="mailto:karelhernandez2207@gmail.com">
                   <button type="button">  
                     Contact
                     <i className="bi bi-envelope-check-fill"></i>
@@ -43,11 +43,11 @@ const Footer: React.FC<HomeProps> = ({isDarkMode}) => {
           <a href="https://www.linkedin.com/in/karel95/" target="_blank" rel="noopener noreferrer">
             <i className="bi bi-linkedin"></i>
           </a>
-          <a href="mailto:karelh2207@gmail.com" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:karelhernandez2207@gmail.com" target="_blank" rel="noopener noreferrer">
             <i className="bi bi-envelope"></i>
           </a>
         </div>
-        <div className="derechos-de-autor">Created by Karel Hernández (2024) &#169;</div>
+        <div className="derechos-de-autor">Created by Karel Hernández (2025) &#169;</div>
       </footer>
     </>
   )
