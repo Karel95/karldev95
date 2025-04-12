@@ -1,3 +1,6 @@
+import React from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 // import '../styles/footer.css'; // Importa los estilos CSS
 
 interface HomeProps {
@@ -5,14 +8,19 @@ interface HomeProps {
 }
 
 const Footer: React.FC<HomeProps> = ({isDarkMode}) => {
-    const imageSrc = isDarkMode
-    ? "imagenes/500x500 Dark-Transparent.png"
-    : "imagenes/500x500 Light-Transparent.png";
+  React.useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }
+  , []);
+
+  const imageSrc = isDarkMode
+  ? "imagenes/500x500 Dark-Transparent.png"
+  : "imagenes/500x500 Light-Transparent.png";
 
   return (
     <>
       <section id="contacto" className="contacto seccion-oscura">
-        <div className="container">
+        <div className="container" data-aos="zoom-in-up">
           <div className="container text-center rectangulo d-flex justify-content-evenly">
             <div className="row">
               <div className="col-12 col-md-4 seccion-titulo">
@@ -25,7 +33,7 @@ const Footer: React.FC<HomeProps> = ({isDarkMode}) => {
                 <a href="mailto:karelhernandez2207@gmail.com">
                   <button type="button">  
                     Contact
-                    <i className="bi bi-envelope-check-fill"></i>
+                    <i className="bi bi-envelope-check-fill ml-1"></i>
                   </button>
                 </a>
               </div>

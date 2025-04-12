@@ -1,4 +1,7 @@
 import { Button } from "@mui/material";
+import React from "react";
+import Aos from "aos";
+import "aos/dist/aos.css"; // Importa los estilos de AOS
 // import '../styles/home.css'; // Importa los estilos CSS
 
 interface HomeProps {
@@ -6,6 +9,12 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = () => {
+  // Inicializa AOS
+  React.useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }
+  , []);
+
   // const imageSrc = isDarkMode
   //   ? "imagenes/500x500 Dark-Transparent.png"
   //   : "imagenes/500x500 Light-Transparent.png";
@@ -14,7 +23,7 @@ const Home: React.FC<HomeProps> = () => {
       <section className="hero align-items-stretch">
         <div className="hero-principal m-auto w-full justify-center">
           <div className="flex flex-col sm:flex-row">
-            <div className="flex w-full sm:w-1/3 h-1/4 sm:h-auto justify-center align-items-center">
+            <div className="flex w-full sm:w-1/3 h-1/4 sm:h-auto justify-center align-items-center" data-aos="fade-right">
               <div className="bg-dots">
                 <div className="shadow-2xl max-w-xs z-10 rounded-md mt-8">
                   <img
@@ -26,7 +35,7 @@ const Home: React.FC<HomeProps> = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:w-1/3 h-3/4 sm:h-auto justify-content-end align-items-start m-3 mr-12">
+            <div className="flex flex-col sm:w-1/3 h-3/4 sm:h-auto justify-content-end align-items-start m-3 mr-12" data-aos="fade-up">
               <h1 className="white-text text-5xl font-bold">Hello, I am Karel Hernández</h1>
               <h2 className="white-text">
                 I am a passionate developer with a strong foundation in web, app and game development, backend systems, and blockchain technology.
@@ -44,7 +53,7 @@ const Home: React.FC<HomeProps> = () => {
           </div>
         </div>
 
-        <div className="hero-inferior flex items-center justify-center h-screen">
+        <div className="hero-inferior flex items-center justify-center h-screen" data-aos="fade-up">
           <img
             className="hero-inferior-imagen img-fluid"
             src="imagenes/hero-inferior.svg"
@@ -55,7 +64,7 @@ const Home: React.FC<HomeProps> = () => {
 
       {/* Sobre mi */}
       <section id="sobre-mi" className="sobre-mi">
-        <div className="contenedor">
+        <div className="contenedor" data-aos="fade-up">
           <h2 className="seccion-titulo">About Me</h2>
           <p className="seccion-texto">
             I am a passionate Web Developer with a strong foundation in frontend
@@ -72,7 +81,7 @@ const Home: React.FC<HomeProps> = () => {
       {/* ai-thon */}
       <div className="m-auto max-w-6xl p-12">
         <div className="flex flex-col md:flex-row">
-          <div className="md:w-1/2 max-w-md flex flex-col justify-center">
+          <div className="md:w-1/2 max-w-md flex flex-col justify-center" data-aos="fade-up-right">
             <div className="md:text-5xl text-2xl uppercase font-black">
               Suriname Offline Education Web
             </div>
@@ -94,7 +103,7 @@ const Home: React.FC<HomeProps> = () => {
               </Button>
             </div>
           </div>
-          <div className="flex md:justify-end w-full md:w-1/2 -mt-5">
+          <div className="flex md:justify-end w-full md:w-1/2 -mt-5" data-aos="fade-up-left">
             <div className="bg-dots">
               <div className="shadow-2xl max-w-md z-10 rounded-md mt-6 ml-4">
                 <div className="proyecto">
@@ -132,7 +141,7 @@ const Home: React.FC<HomeProps> = () => {
       <section id="experiencia" className="experiencia seccion-clara">
         <div className="container text-center">
           <div className="row">
-            <div className="columna col-12 col-md-4">
+            <div className="columna col-12 col-md-4" data-aos="flip-left">
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">Frontend</p>
               <h6>Creator of digital experiences</h6>
@@ -145,10 +154,12 @@ const Home: React.FC<HomeProps> = () => {
                 <span className="badge text-bg-primary">CSS</span>
                 <span className="badge text-bg-primary">JavaScript</span>
                 <span className="badge text-bg-primary">React</span>
+                <span className="badge text-bg-primary">NextJS</span>
+                <span className="badge text-bg-primary">Tailwind</span>
                 <span className="badge text-bg-primary">Bootstrap</span>
               </div>
             </div>
-            <div className="columna col-12 col-md-4">
+            <div className="columna col-12 col-md-4" data-aos="flip-up">
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">Backend</p>
               <h6>Innovation within your reach</h6>
@@ -156,10 +167,11 @@ const Home: React.FC<HomeProps> = () => {
               <div className="badges-contenedor">
                 <span className="badge text-bg-primary">Node.js</span>
                 <span className="badge text-bg-primary">Express.js</span>
-                <span className="badge text-bg-primary">RESTful APIs</span>
+                <span className="badge text-bg-primary">Python</span>
+                <span className="badge text-bg-primary">Django</span>
               </div>
             </div>
-            <div className="columna col-12 col-md-4">
+            <div className="columna col-12 col-md-4" data-aos="flip-right">
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">Database</p>
               <h6>Projects with purpose</h6>
@@ -173,7 +185,7 @@ const Home: React.FC<HomeProps> = () => {
                 <span className="badge text-bg-primary">MySQL</span>
               </div>
             </div>
-            <div className="columna col-12 col-md-4">
+            <div className="columna col-12 col-md-4" data-aos="flip-left">
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">Version Control</p>
               <h6>The art of coding</h6>
@@ -186,7 +198,7 @@ const Home: React.FC<HomeProps> = () => {
                 <span className="badge text-bg-primary">GitHub</span>
               </div>
             </div>
-            <div className="columna col-12 col-md-4">
+            <div className="columna col-12 col-md-4" data-aos="flip-up">
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">DevOps</p>
               <h6>Building the future, one project at a time</h6>
@@ -199,7 +211,7 @@ const Home: React.FC<HomeProps> = () => {
                 <span className="badge text-bg-primary">Vercel</span>
               </div>
             </div>
-            <div className="columna col-12 col-md-4">
+            <div className="columna col-12 col-md-4" data-aos="flip-right">
               <i className="bi bi-laptop"></i>
               <p className="experiencia-titulo">Other</p>
               <h6>Innovative by nature, precise by design</h6>
