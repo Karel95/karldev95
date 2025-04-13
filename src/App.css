@@ -1,0 +1,27 @@
+
+.libutton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7px;
+  margin-left: 10px;
+  text-align: center;
+  outline: none;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  /* width: 200px; */
+  height: 32px;
+  border-radius: 16px;
+  background-color: #0A66C2;
+  font-family: "SF Pro Text", Helvetica, sans-serif;
+}
+
+.libutton:hover {
+  background-color: #004182;
+  cursor: pointer;
+}
+
+.libutton:active {
+  background-color: #003060;
+  cursor: pointer;
+}

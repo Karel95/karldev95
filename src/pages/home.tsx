@@ -40,7 +40,7 @@ const Home: React.FC<HomeProps> = () => {
               <h2 className="white-text">
                 I am a passionate developer with a strong foundation in web, app and game development, backend systems, and blockchain technology.
               </h2>
-              <div className="my-3 h-16">
+              <div className="my-3 h-8 flex flex-row">
                 <Button
                   variant="contained"
                   href="mailto:karelhernandez2207@gmail.com"
@@ -48,6 +48,7 @@ const Home: React.FC<HomeProps> = () => {
                 >
                   Contact me
                 </Button>
+                <a className="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=karel95" target="_blank">LinkedIn</a>
               </div>
             </div>
           </div>
