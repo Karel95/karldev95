@@ -5,7 +5,7 @@ import {
   Container,
   IconButton,
   Menu,
-  MenuItem,
+  // MenuItem,
   Snackbar,
   SnackbarCloseReason,
   Toolbar,
@@ -18,7 +18,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 // import Avatar from "@mui/material/Avatar";
 // import Tooltip from "@mui/material/Tooltip";
 import Icon from "./icon";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 // Definimos los tipos de las props para el ThemeMode
 type ModeProps = {
@@ -139,13 +139,13 @@ const Navbar: React.FC<ModeProps> = ({ isDarkMode, mode }) => {
               onClose={handleCloseNavMenu}
               sx={{ display: { xs: "block", md: "none" } }}
             >
-              <MenuItem
+              {/* <MenuItem
                 onClick={handleCloseNavMenu}
                 component={Link}
                 to="/projects"
               >
                 <Typography sx={{ textAlign: "center" }}>Projects</Typography>
-              </MenuItem>
+              </MenuItem> */}
               {/* <MenuItem
                 onClick={handleCloseNavMenu}
                 component={Link}
@@ -186,9 +186,9 @@ const Navbar: React.FC<ModeProps> = ({ isDarkMode, mode }) => {
             Karldev95
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <MenuItem component={Link} to="/projects">
+            {/* <MenuItem component={Link} to="/projects">
               <Typography sx={{ textAlign: "center" }}>Projects</Typography>
-            </MenuItem>
+            </MenuItem> */}
             {/* <MenuItem component={Link} to="/login">
               <Typography sx={{ textAlign: "center" }}>Login</Typography>
             </MenuItem>
