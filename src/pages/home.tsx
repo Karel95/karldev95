@@ -140,7 +140,7 @@ const Home: React.FC<HomeProps> = () => {
             <div className="bg-dots">
               <div className="shadow-2xl max-w-md z-10 rounded-md mt-6 ml-4">
                 <div className="proyecto">
-                  <img src="images/proyecto5.png" alt="EduWeb" />
+                  <img src="images/eduweb.png" alt="EduWeb" />
                   <div className="overlay">
                     <p>EduWeb</p>
                     <div className="iconos-contenedor">
