@@ -49,7 +49,7 @@ const Home: React.FC<HomeProps> = () => {
                 and game development, backend systems, and blockchain
                 technology.
               </h2>
-              <div className="my-3 h-8 flex flex-row">
+              <div className="my-3 h-auto flex flex-wrap gap-2 justify-center items-center">
                 <a
                   className="libutton"
                   href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=karel95"
