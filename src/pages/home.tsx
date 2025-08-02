@@ -15,8 +15,8 @@ const Home: React.FC<HomeProps> = () => {
   }, []);
 
   // const imageSrc = isDarkMode
-  //   ? "imagenes/500x500 Dark-Transparent.png"
-  //   : "imagenes/500x500 Light-Transparent.png";
+  //   ? "images/500x500 Dark-Transparent.png"
+  //   : "images/500x500 Light-Transparent.png";
   return (
     <>
       <section className="hero align-items-stretch">
@@ -29,7 +29,7 @@ const Home: React.FC<HomeProps> = () => {
               <div className="bg-dots">
                 <div className="shadow-2xl max-w-xs z-10 rounded-md mt-8">
                   <img
-                    src="imagenes/profile.jpg"
+                    src="images/profile.jpg"
                     alt="Karel Hernández"
                     className="rounded-md"
                   />
@@ -83,7 +83,7 @@ const Home: React.FC<HomeProps> = () => {
         >
           <img
             className="hero-inferior-imagen img-fluid"
-            src="imagenes/hero-inferior.svg"
+            src="images/hero-inferior.svg"
             alt="Monitor, laptop y logos de HTML, CSS, JavaScript y React."
           />
         </div>
@@ -140,7 +140,7 @@ const Home: React.FC<HomeProps> = () => {
             <div className="bg-dots">
               <div className="shadow-2xl max-w-md z-10 rounded-md mt-6 ml-4">
                 <div className="proyecto">
-                  <img src="imagenes/proyecto5.png" alt="EduWeb" />
+                  <img src="images/proyecto5.png" alt="EduWeb" />
                   <div className="overlay">
                     <p>EduWeb</p>
                     <div className="iconos-contenedor">
@@ -162,7 +162,7 @@ const Home: React.FC<HomeProps> = () => {
                   </div>
                 </div>
                 <div className="text-2xl bg-white">
-                  <img alt="AI-thon" className="" src="imagenes/ai-thon.jpg" />{" "}
+                  <img alt="AI-thon" className="" src="images/ai-thon.jpg" />{" "}
                 </div>
               </div>
             </div>

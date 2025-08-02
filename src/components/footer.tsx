@@ -14,8 +14,8 @@ const Footer: React.FC<HomeProps> = ({isDarkMode}) => {
   , []);
 
   const imageSrc = isDarkMode
-  ? "imagenes/500x500 Dark-Transparent.png"
-  : "imagenes/500x500 Light-Transparent.png";
+  ? "images/500x500 Dark-Transparent.png"
+  : "images/500x500 Light-Transparent.png";
 
   return (
     <>
