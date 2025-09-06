@@ -54,6 +54,7 @@ const Home: React.FC<HomeProps> = () => {
                   className="libutton"
                   href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=karel95"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Follow me on LinkedIn
                 </a>
@@ -95,7 +96,7 @@ const Home: React.FC<HomeProps> = () => {
           <h2 className="seccion-titulo">About Me</h2>
           <p className="seccion-texto">
             I am a passionate Web Developer with a strong foundation in frontend
-            technologies. With over 2 years of experience in creating dynamic,
+            technologies. With many years of experience in creating dynamic,
             responsive, and user-friendly websites, I have developed a keen eye
             for detail and a commitment to delivering high-quality solutions. My
             expertise lies in HTML, CSS, JavaScript, and modern frameworks like
