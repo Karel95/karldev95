@@ -140,28 +140,6 @@ const Home: React.FC<HomeProps> = () => {
           >
             <div className="bg-dots">
               <div className="shadow-2xl max-w-md z-10 rounded-md mt-6 ml-4">
-                <div className="proyecto">
-                  <img src="images/eduweb.png" alt="EduWeb" />
-                  <div className="overlay">
-                    <p>EduWeb</p>
-                    <div className="iconos-contenedor">
-                      <a
-                        href="https://github.com/Karel95/offline-education-web"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-github"></i>
-                      </a>
-                      <a
-                        href="https://eduweb-suriname.netlify.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-laptop"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
                 <div className="text-2xl bg-white">
                   <img alt="AI-thon" className="" src="images/ai-thon.jpg" />{" "}
                 </div>
