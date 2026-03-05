@@ -1,256 +1,189 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  Container,
-  IconButton,
-  Menu,
-  // MenuItem,
-  Snackbar,
-  SnackbarCloseReason,
-  Toolbar,
-  Typography,
-} from "@mui/material";
-import React from "react";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
-import MenuIcon from "@mui/icons-material/Menu";
-// import Avatar from "@mui/material/Avatar";
-// import Tooltip from "@mui/material/Tooltip";
-import Icon from "./icon";
-// import { Link } from "react-router-dom";
+"use client";
 
-// Definimos los tipos de las props para el ThemeMode
-type ModeProps = {
-  isDarkMode: boolean;
-  mode: (newMode: boolean) => void;
-};
+import { useState, useEffect, useCallback } from "react";
+import { useTheme } from "next-themes";
+import { motion, AnimatePresence } from "framer-motion";
+import { Moon, Sun, Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
 
-//const pages = ["Home", "Proyects", "Contact me"];
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const navLinks = [
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
+  { href: "#contact", label: "Contact" },
+];
 
-const Navbar: React.FC<ModeProps> = ({ isDarkMode, mode }) => {
-  // useEffect
-  React.useEffect(() => {
-    mode(!isDarkMode);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+export function Navbar() {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  const handleScroll = useCallback(() => {
+    setScrolled(window.scrollY > 50);
+
+    const sections = navLinks.map((l) => l.href.slice(1));
+    let current = "";
+    for (const id of sections) {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= 150) {
+        current = id;
+      }
+    }
+    setActiveSection(current);
   }, []);
 
-  const toggleTheme = () => {
-    mode(!isDarkMode);
-  };
-
-  const themeIcon = isDarkMode ? <DarkModeIcon /> : <LightModeIcon />;
-
-  //
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-  // const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
-  //   null
-  // );
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  // const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
-
-  //snackbar
-  const [open, setOpen] = React.useState(false);
-
-  const themeMsg = isDarkMode ? 'Dark Mode Active' : 'Light Mode Active';
-
-  const handleClick = () => {
-    setOpen(true);
-  };
-
-  const handleClose = (
-    _event: React.SyntheticEvent | Event,
-    reason?: SnackbarCloseReason
-  ) => {
-    if (reason === "clickaway") {
-      return;
-    }
-
-    setOpen(false);
-  };
+  useEffect(() => {
+    setMounted(true);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   return (
-    <AppBar>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Box
-            className="logo-icon-container"
-            sx={{ display: { md: "flex" }, mr: 1 }}
-          >
-            <Icon />
-          </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              ml: 6,
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontWeight: 700,
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-background/70 backdrop-blur-2xl border-b border-border/40 shadow-sm shadow-black/5 dark:shadow-black/20"
+          : "bg-transparent"
+      }`}
+    >
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8 py-4">
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative size-9 overflow-hidden rounded-full ring-2 ring-foreground/10 transition-all duration-300 group-hover:ring-primary/60 group-hover:shadow-lg group-hover:shadow-primary/20">
+            <Image
+              src="/images/profile.png"
+              alt="Karel Hernandez"
+              fill
+              className="object-cover"
+              sizes="36px"
+            />
+          </div>
+          <span className="font-display text-lg font-bold tracking-tight transition-colors group-hover:text-primary">
             Karldev95
-          </Typography>
+          </span>
+        </Link>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }, ml: 5 }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
+        {/* Desktop nav */}
+        <div className="hidden md:flex items-center gap-1 bg-muted/50 backdrop-blur-sm rounded-full px-1.5 py-1.5 border border-border/50">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`relative px-4 py-1.5 text-sm font-medium transition-colors rounded-full ${
+                activeSection === link.href.slice(1)
+                  ? "text-primary-foreground"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
             >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{ display: { xs: "block", md: "none" } }}
-            >
-              {/* <MenuItem
-                onClick={handleCloseNavMenu}
-                component={Link}
-                to="/projects"
-              >
-                <Typography sx={{ textAlign: "center" }}>Projects</Typography>
-              </MenuItem> */}
-              {/* <MenuItem
-                onClick={handleCloseNavMenu}
-                component={Link}
-                to="/login"
-              >
-                <Typography sx={{ textAlign: "center" }}>Login</Typography>
-              </MenuItem>
-              <MenuItem
-                onClick={handleCloseNavMenu}
-                component={Link}
-                to="/register"
-              >
-                <Typography sx={{ textAlign: "center" }}>Register</Typography>
-              </MenuItem>
-              <MenuItem
-                onClick={handleCloseNavMenu}
-                component={Link}
-                to="/weather"
-              >
-                <Typography sx={{ textAlign: "center" }}>Weather</Typography>
-              </MenuItem> */}
-            </Menu>
-          </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontWeight: 700,
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Karldev95
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {/* <MenuItem component={Link} to="/projects">
-              <Typography sx={{ textAlign: "center" }}>Projects</Typography>
-            </MenuItem> */}
-            {/* <MenuItem component={Link} to="/login">
-              <Typography sx={{ textAlign: "center" }}>Login</Typography>
-            </MenuItem>
-            <MenuItem component={Link} to="/register">
-              <Typography sx={{ textAlign: "center" }}>Register</Typography>
-            </MenuItem>
-            <MenuItem component={Link} to="/weather">
-              <Typography sx={{ textAlign: "center" }}>Weather</Typography>
-            </MenuItem> */}
-          </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            {/* <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip> */}
+              {activeSection === link.href.slice(1) && (
+                <motion.div
+                  layoutId="activeSection"
+                  className="absolute inset-0 bg-primary rounded-full"
+                  transition={{ type: "spring", bounce: 0.15, duration: 0.5 }}
+                />
+              )}
+              <span className="relative z-10">{link.label}</span>
+            </Link>
+          ))}
+        </div>
+
+        <div className="hidden md:flex items-center">
+          {mounted && (
             <Button
-              className="tema"
-              sx={{ ml: "10px" }}
-              startIcon={themeIcon}
-              variant="contained"
-              color="primary"
-              onClick={() => {
-                toggleTheme();
-                handleClick();
-              }}
-            />
-            <Snackbar
-              open={open}
-              autoHideDuration={3000}
-              onClose={handleClose}
-              message={themeMsg}
-            />
-            {/* <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+              variant="ghost"
+              size="icon"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="rounded-full hover:bg-primary/10 hover:text-primary"
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: "center" }}>
-                    {setting}
-                  </Typography>
-                </MenuItem>
-              ))}
-            </Menu> */}
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
-  );
-};
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.div
+                  key={theme}
+                  initial={{ scale: 0, rotate: -90 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  exit={{ scale: 0, rotate: 90 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
+                </motion.div>
+              </AnimatePresence>
+            </Button>
+          )}
+        </div>
 
-export default Navbar;
+        {/* Mobile toggle */}
+        <div className="flex md:hidden items-center gap-1">
+          {mounted && (
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="rounded-full"
+            >
+              {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
+            </Button>
+          )}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="rounded-full"
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={mobileOpen ? "close" : "open"}
+                initial={{ scale: 0, rotate: -90 }}
+                animate={{ scale: 1, rotate: 0 }}
+                exit={{ scale: 0, rotate: 90 }}
+                transition={{ duration: 0.15 }}
+              >
+                {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+              </motion.div>
+            </AnimatePresence>
+          </Button>
+        </div>
+      </nav>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="md:hidden bg-background/95 backdrop-blur-2xl border-b border-border overflow-hidden"
+          >
+            <div className="flex flex-col px-6 py-4 gap-1">
+              {navLinks.map((link, i) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                >
+                  <Link
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`block px-4 py-3 text-base font-medium transition-colors rounded-xl ${
+                      activeSection === link.href.slice(1)
+                        ? "text-primary bg-primary/10"
+                        : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
+  );
+}
