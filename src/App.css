@@ -1,41 +1,55 @@
+/* ── LinkedIn & GitHub CTA buttons ─────────── */
 .libutton,
 .gibutton {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 7px 10px;
+  padding: 0.6em 1.4em;
   text-align: center;
   outline: none;
   text-decoration: none !important;
-  color: #ffffff !important;
-  border-radius: 16px;
+  color: var(--bg-primary, #0a0a0a) !important;
   white-space: normal;
   word-break: break-word;
   max-width: 100%;
   width: fit-content;
+  font-family: var(--font-display, 'Syne', sans-serif);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
 }
 
 .libutton {
-  background-color: #0A66C2;
-  font-family: "SF Pro Text", Helvetica, sans-serif;
+  background-color: var(--accent, #c8ff00);
 }
 
 .libutton:hover {
-  background-color: #004182;
+  background-color: var(--accent-dim, #a3cc00);
   cursor: pointer;
+  transform: translateY(-2px);
 }
 
 .libutton:active {
-  background-color: #003060;
+  background-color: var(--accent-dim, #a3cc00);
+  transform: translateY(0);
 }
 
 .gibutton {
-  background-color: #202020;
-  font-family: "SF Pro Text", Helvetica, sans-serif;
+  background-color: transparent;
+  border: 1.5px solid var(--text-muted, #555250);
+  color: var(--text-primary, #e8e4dd) !important;
+  font-size: 1.2rem;
+  padding: 0.5em 0.7em;
 }
 
 .gibutton:hover {
-  background-color: #404040;
+  border-color: var(--accent, #c8ff00);
+  color: var(--accent, #c8ff00) !important;
   cursor: pointer;
-  scale: 1.05;
+  transform: translateY(-2px);
 }

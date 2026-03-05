@@ -4,14 +4,32 @@ export const lightTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#1976d2', // Color principal para el tema claro
+      main: '#1a1a1a',
     },
     secondary: {
-      main: '#9c27b0', // Color secundario para el tema claro
+      main: '#c8ff00',
     },
     background: {
-      default: '#f5f5f5', // Fondo por defecto para el tema claro
+      default: '#f4f1eb',
+      paper: '#ffffff',
     },
+    text: {
+      primary: '#1a1a1a',
+      secondary: '#5a5650',
+    },
+  },
+  typography: {
+    fontFamily: "'DM Sans', sans-serif",
+    h1: { fontFamily: "'Syne', sans-serif", fontWeight: 800 },
+    h2: { fontFamily: "'Syne', sans-serif", fontWeight: 700 },
+    h3: { fontFamily: "'Syne', sans-serif", fontWeight: 700 },
+    h4: { fontFamily: "'Syne', sans-serif", fontWeight: 700 },
+    h5: { fontFamily: "'Syne', sans-serif", fontWeight: 700 },
+    h6: { fontFamily: "'Syne', sans-serif", fontWeight: 600 },
+    button: { fontFamily: "'Syne', sans-serif", fontWeight: 600, letterSpacing: '0.06em' },
+  },
+  shape: {
+    borderRadius: 0,
   },
 });
 
@@ -19,13 +37,31 @@ export const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#90caf9', // Color principal para el tema oscuro
+      main: '#c8ff00',
     },
     secondary: {
-      main: '#f48fb1', // Color secundario para el tema oscuro
+      main: '#c8ff00',
     },
     background: {
-      default: '#121212', // Fondo por defecto para el tema oscuro
+      default: '#0a0a0a',
+      paper: '#161616',
     },
+    text: {
+      primary: '#e8e4dd',
+      secondary: '#8a8780',
+    },
+  },
+  typography: {
+    fontFamily: "'DM Sans', sans-serif",
+    h1: { fontFamily: "'Syne', sans-serif", fontWeight: 800 },
+    h2: { fontFamily: "'Syne', sans-serif", fontWeight: 700 },
+    h3: { fontFamily: "'Syne', sans-serif", fontWeight: 700 },
+    h4: { fontFamily: "'Syne', sans-serif", fontWeight: 700 },
+    h5: { fontFamily: "'Syne', sans-serif", fontWeight: 700 },
+    h6: { fontFamily: "'Syne', sans-serif", fontWeight: 600 },
+    button: { fontFamily: "'Syne', sans-serif", fontWeight: 600, letterSpacing: '0.06em' },
+  },
+  shape: {
+    borderRadius: 0,
   },
 });

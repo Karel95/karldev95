@@ -1,17 +1,15 @@
 import React from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-// import '../styles/footer.css'; // Importa los estilos CSS
 
 interface HomeProps {
-  isDarkMode: boolean; // Define el tipo aquí
+  isDarkMode: boolean;
 }
 
 const Footer: React.FC<HomeProps> = ({isDarkMode}) => {
   React.useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }
-  , []);
+    Aos.init({ duration: 1200, easing: 'ease-out-cubic', once: true });
+  }, []);
 
   const imageSrc = isDarkMode
   ? "images/500x500 Dark-Transparent.png"
@@ -20,16 +18,16 @@ const Footer: React.FC<HomeProps> = ({isDarkMode}) => {
   return (
     <>
       <section id="contacto" className="contacto seccion-oscura">
-        <div className="container" data-aos="zoom-in-up">
-          <div className="container text-center rectangulo d-flex justify-content-evenly">
+        <div className="container" data-aos="fade-up">
+          <div className="container text-center rectangulo d-flex justify-content-evenly" style={{ padding: '2.5rem 1.5rem' }}>
             <div className="row">
               <div className="col-12 col-md-4 seccion-titulo">
-                Lets talk!
+                Let's talk!
               </div>
               <div className="col-12 col-md-4 descripcion">
                 I am always open to discussing new opportunities, collaborations, or freelance projects. Contact me to start your development project, and I'll turn your vision into reality.
               </div>
-              <div className="col-12 col-md-4">
+              <div className="col-12 col-md-4 d-flex align-items-center justify-content-center">
                 <a href="mailto:karelhernandez2207@gmail.com">
                   <button type="button">  
                     Contact
@@ -42,16 +40,16 @@ const Footer: React.FC<HomeProps> = ({isDarkMode}) => {
         </div>
       </section>
       <footer className="seccion-oscura d-flex flex-column align-items-center justify-content-center"> 
-        <img className="footer-logo rounded-circle" src={imageSrc} alt="Logo del portafolio" />
+        <img className="footer-logo" src={imageSrc} alt="Logo del portafolio" data-aos="scale-in" />
         <p className="footer-texto text-center">I learn and create every day.<br/>Let's build a project together.<br/>Feel free to reach out to me at...</p>
         <div className="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
-          <a href="https://github.com/Karel95" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Karel95" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <i className="bi bi-github"></i>
           </a>
-          <a href="https://www.linkedin.com/in/karel95/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/karel95/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i className="bi bi-linkedin"></i>
           </a>
-          <a href="mailto:karelhernandez2207@gmail.com" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:karelhernandez2207@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
             <i className="bi bi-envelope"></i>
           </a>
         </div>
